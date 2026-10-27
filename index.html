@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Summit Academy — Demo Coaching Website</title>
+<meta name="description" content="Demo coaching institute website with courses, results, FAQ and demo class booking. Built by Harvi Sharma.">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0B2545;--blue:#1D6FE8;--sun:#FFB703;--bg:#F5F8FF;--card:#fff;--muted:#5B6B82;--line:#DCE5F5}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--navy);line-height:1.65}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+.demo{background:var(--sun);color:var(--navy);text-align:center;font-size:.82rem;padding:6px;font-weight:600}
+
+header{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--line);z-index:10}
+.nav{display:flex;justify-content:space-between;align-items:center;max-width:1040px;margin:0 auto;padding:14px 22px}
+.logo{font-weight:700;font-size:1.2rem}
+.logo b{color:var(--blue)}
+.nav ul{display:flex;gap:24px;list-style:none;font-weight:500;font-size:.94rem}
+.nav ul a:hover{color:var(--blue)}
+.btn{display:inline-block;background:var(--blue);color:#fff;padding:12px 24px;border-radius:10px;font-weight:600;border:0;font-family:inherit;font-size:.95rem;cursor:pointer;transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}
+@media(max-width:760px){.nav ul{display:none}}
+
+.hero{background:var(--navy);color:#fff;padding:80px 0}
+.hero-in{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(2rem,5.5vw,3.4rem);line-height:1.12;font-weight:700}
+.hero p{color:#BCCBE6;margin:16px 0 26px;max-width:480px}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.stat{background:rgba(255,255,255,.08);border-radius:14px;padding:20px;text-align:center}
+.stat b{display:block;font-size:2rem;color:var(--sun)}
+.stat span{font-size:.85rem;color:#BCCBE6}
+@media(max-width:760px){.hero-in{grid-template-columns:1fr}}
+
+section{padding:70px 0}
+h2{font-size:clamp(1.6rem,4vw,2.2rem);font-weight:700;margin-bottom:8px}
+.sub{color:var(--muted);margin-bottom:30px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-4px);box-shadow:0 14px 30px -14px rgba(11,37,69,.25)}
+.card h3{margin-bottom:6px;font-size:1.1rem}
+.card p{color:var(--muted);font-size:.92rem}
+.fee{margin-top:14px;font-weight:700;color:var(--blue)}
+
+/* FAQ */
+.faq{max-width:720px}
+.q{background:var(--card);border:1px solid var(--line);border-radius:12px;margin-bottom:10px}
+.q button{width:100%;text-align:left;background:none;border:0;padding:16px 18px;font:inherit;font-weight:600;color:var(--navy);cursor:pointer;display:flex;justify-content:space-between;gap:12px}
+.q button::after{content:"+";color:var(--blue);font-size:1.3rem;line-height:1}
+.q button[aria-expanded="true"]::after{content:"–"}
+.a{max-height:0;overflow:hidden;transition:max-height .3s ease;padding:0 18px;color:var(--muted);font-size:.93rem}
+.q button[aria-expanded="true"] + .a{max-height:160px;padding-bottom:16px}
+
+/* form */
+.book{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start}
+@media(max-width:760px){.book{grid-template-columns:1fr}}
+form{display:grid;gap:12px}
+label{font-size:.85rem;font-weight:600}
+input,select{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font:inherit;background:#fff}
+input:focus,select:focus{outline:none;border-color:var(--blue)}
+.msg{display:none;margin-top:10px;padding:12px 14px;border-radius:10px;background:#E4F7EA;color:#17653A;font-size:.9rem}
+.msg.show{display:block}
+footer{background:var(--navy);color:#BCCBE6;text-align:center;padding:30px 22px;font-size:.88rem}
+</style>
+</head>
+<body>
+<div class="demo">Demo website made by Harvi Sharma — all names, results and fees are sample content.</div>
+<header>
+  <div class="nav">
+    <a class="logo" href="#top">Summit<b>Academy</b></a>
+    <ul><li><a href="#courses">Courses</a></li><li><a href="#faq">FAQ</a></li><li><a href="#book">Demo class</a></li></ul>
+    <a class="btn" href="#book">Book free demo</a>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap hero-in">
+      <div>
+        <h1>Small
